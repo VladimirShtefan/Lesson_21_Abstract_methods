@@ -21,8 +21,14 @@ class Transaction:
         receiver: BaseStorage = store_list[num_to_store]
         try:
             self._remove_transaction(sender=sender)
+            print(f'Нужное количество есть в {sender.get_storage_name()}')
             try:
                 self._add_transaction(receiver=receiver)
+                print(f'Курьер забрал {self._amount} {self._product} из {sender.get_storage_name()}')
+                print(f'Курьер везет {self._amount} {self._product} из '
+                      f'{sender.get_storage_name()} в {receiver.get_storage_name()}')
+                print(f'Курьер доставил {self._amount} {self._product} в '
+                      f'{receiver.get_storage_name()}')
             except BaseError as e:
                 print(e.message)
                 self._add_transaction(receiver=sender)
