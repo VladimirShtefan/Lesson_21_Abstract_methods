@@ -1,4 +1,4 @@
-from base_storage import BaseStorage
+from models.base_storage import BaseStorage
 
 
 class Store(BaseStorage):

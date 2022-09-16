@@ -1,8 +1,8 @@
-from request import Request
-from shop import Shop
-from storage_enum import StorageEnum
-from store import Store
-from transaction import Transaction
+from models.request import Request
+from models.shop import Shop
+from models.storage_enum import StorageEnum
+from models.store import Store
+from models.transaction import Transaction
 
 shop = Shop({'печеньки': 15,
              'фасоль': 0,

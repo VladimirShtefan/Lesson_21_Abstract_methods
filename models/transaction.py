@@ -1,7 +1,7 @@
-from base_storage import BaseStorage
-from exceptions import ErrorOverload, ErrorDeleteItem, ErrorNotAvailable, BaseError
-from shop import Shop
-from store import Store
+from models.base_storage import BaseStorage
+from exceptions import ErrorDeleteItem, ErrorNotAvailable, BaseError
+from models.shop import Shop
+from models.store import Store
 
 
 class Transaction:

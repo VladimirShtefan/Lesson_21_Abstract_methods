@@ -1,4 +1,4 @@
-from abstract_storage import Storage
+from models.abstract_storage import Storage
 from exceptions import ErrorOverload, ErrorDeleteItem, ErrorNotAvailable
 
 
