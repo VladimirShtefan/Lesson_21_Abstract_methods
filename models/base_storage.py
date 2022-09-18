@@ -10,11 +10,11 @@ class BaseStorage(Storage):
         self.__capacity = capacity
 
     @property
-    def items(self):
+    def items(self) -> dict[str, int]:
         return self.__items
 
     @property
-    def capacity(self):
+    def capacity(self) -> int:
         return self.__capacity
 
     def add(self, name: str, amount: int) -> None:
@@ -41,5 +41,5 @@ class BaseStorage(Storage):
     def get_unique_items_count(self) -> int:
         return len(self.__items)
 
-    def get_storage_name(self):
+    def get_storage_name(self) -> str:
         return self.__storage_name__

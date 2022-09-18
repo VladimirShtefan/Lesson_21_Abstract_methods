@@ -6,12 +6,12 @@ class Storage(ABC):
 
     @property
     @abstractmethod
-    def items(self):
+    def items(self) -> dict[str, int]:
         pass
 
     @property
     @abstractmethod
-    def capacity(self):
+    def capacity(self) -> int:
         pass
 
     @abstractmethod

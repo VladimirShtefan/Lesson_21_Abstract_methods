@@ -11,7 +11,7 @@ class Transaction:
         self._amount = amount
         self._product = product
 
-    def start_transaction(self, store_list: tuple[Shop, Store]):
+    def start_transaction(self, store_list: tuple[Shop, Store]) -> None:
         store_dict = {}
         for index, store in enumerate(store_list):
             store_dict[store.get_storage_name()] = index
@@ -42,8 +42,8 @@ class Transaction:
                   f'{receiver.get_items()}\n'
                   f'Свободное место: {receiver.get_free_space()}')
 
-    def _remove_transaction(self, sender: BaseStorage):
+    def _remove_transaction(self, sender: BaseStorage) -> None:
         sender.remove(amount=self._amount, name=self._product)
 
-    def _add_transaction(self, receiver: BaseStorage):
+    def _add_transaction(self, receiver: BaseStorage) -> None:
         receiver.add(amount=self._amount, name=self._product)

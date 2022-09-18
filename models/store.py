@@ -9,5 +9,5 @@ class Store(BaseStorage):
         self.__items = items
         self.__capacity = capacity
 
-    def get_storage_name(self):
+    def get_storage_name(self) -> str:
         return self.__storage_name__

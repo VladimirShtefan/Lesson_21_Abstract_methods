@@ -12,7 +12,7 @@ class Request:
         self._request = request
         self._storages = storages
 
-    def _get_data_for_order(self) -> None | tuple:
+    def _get_data_for_order(self) -> tuple[list, list, str]:
         pattern = '|'.join(self._storages)
         storage = re.findall(f'{pattern}', self._request.lower())
         amount = re.findall('[0-9]+', self._request)

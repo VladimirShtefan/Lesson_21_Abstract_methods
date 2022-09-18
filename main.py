@@ -23,7 +23,7 @@ if __name__ == '__main__':
                              'стоп\n')
         if user_request == 'стоп':
             break
-        req = Request(user_request, [StorageEnum.Shop.value, StorageEnum.Store.value])
+        req = Request(user_request, [StorageEnum.shop.value, StorageEnum.store.value])
         data = req.parse_data()
         if data:
             transaction = Transaction(**data)

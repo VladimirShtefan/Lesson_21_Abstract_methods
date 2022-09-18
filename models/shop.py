@@ -16,5 +16,5 @@ class Shop(BaseStorage):
             raise ErrorOverload(self.__storage_name__)
         super(Shop, self).add(name, amount)
 
-    def get_storage_name(self):
+    def get_storage_name(self) -> str:
         return self.__storage_name__
